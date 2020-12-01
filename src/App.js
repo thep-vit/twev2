@@ -9,7 +9,7 @@ function App(){
   if (online) {
     return (
       <div className="App">
-        <Router>
+        <Router basename="/twev2">
           <Switch>
             <Route exact path="/">
             <Home />
