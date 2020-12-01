@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/twev2/static/css/main.3f3c297a.chunk.css",
+    "main.js": "/twev2/static/js/main.3f65c2db.chunk.js",
+    "main.js.map": "/twev2/static/js/main.3f65c2db.chunk.js.map",
+    "runtime-main.js": "/twev2/static/js/runtime-main.1895e7b2.js",
+    "runtime-main.js.map": "/twev2/static/js/runtime-main.1895e7b2.js.map",
+    "static/css/2.0f52be0d.chunk.css": "/twev2/static/css/2.0f52be0d.chunk.css",
+    "static/js/2.0bccd763.chunk.js": "/twev2/static/js/2.0bccd763.chunk.js",
+    "static/js/2.0bccd763.chunk.js.map": "/twev2/static/js/2.0bccd763.chunk.js.map",
+    "index.html": "/twev2/index.html",
+    "static/css/2.0f52be0d.chunk.css.map": "/twev2/static/css/2.0f52be0d.chunk.css.map",
+    "static/css/main.3f3c297a.chunk.css.map": "/twev2/static/css/main.3f3c297a.chunk.css.map",
+    "static/js/2.0bccd763.chunk.js.LICENSE.txt": "/twev2/static/js/2.0bccd763.chunk.js.LICENSE.txt",
+    "static/media/edition.css": "/twev2/static/media/topography.1be8f0e3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1895e7b2.js",
+    "static/css/2.0f52be0d.chunk.css",
+    "static/js/2.0bccd763.chunk.js",
+    "static/css/main.3f3c297a.chunk.css",
+    "static/js/main.3f65c2db.chunk.js"
+  ]
+}
