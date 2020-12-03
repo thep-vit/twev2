@@ -100,7 +100,7 @@ function ArticleView(props) {
                     )
                 })}
             </div>
-            <div className="row">
+            {articles? <div className="row">
                 <div className="col-md-3 left animate__animated animate__fadeIn animate__fast">
                     {articles.length !== 0 || articles !== undefined ? articles.map((article) => {
                         if (filter !== "All") {
@@ -229,7 +229,7 @@ function ArticleView(props) {
                 </div>
 
 
-            </div>
+            </div> :<></> }
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
