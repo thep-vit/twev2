@@ -264,7 +264,8 @@ function ArticleView(props) {
                                 current.comments.map((comment) => {
                                     return (
                                         <div className="card mt-1 card-comment" >
-                                           <p className="card-title"> {comment}</p>
+                                           <p className="card-title"> {comment.comment}</p>
+                                           <p className="text-muted">{comment.createdBy}</p>
                                         </div>
                                     )
                                 })
