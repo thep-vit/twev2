@@ -11,16 +11,16 @@
 }
 .card-comment {
   padding: 1rem;
-  background-color: rgb(25,25,25);
-  color: rgb(255,255,255)!important;
+  background-color: rgb(25, 25, 25);
+  color: rgb(255, 255, 255) !important;
 }
 .card:hover .text-muted {
   color: rgb(255, 30, 86, 0.7) !important;
 }
 .card-comment:hover {
   padding: 1rem;
-  background-color: rgb(25,25,25);
-  color: rgb(255,255,255)!important;
+  background-color: rgb(25, 25, 25);
+  color: rgb(255, 255, 255) !important;
   cursor: default;
 }
 .badge-pink {
@@ -28,17 +28,17 @@
   background-color: rgb(255, 30, 86);
   color: #fff;
 }
-.card.active .text-muted{
-  color: rgb(238, 238, 238)!important;
+.card.active .text-muted {
+  color: rgb(238, 238, 238) !important;
 }
-.card.active:hover .text-muted .card-title  {
+.card.active:hover .text-muted .card-title {
   cursor: pointer;
   background-color: rgb(165, 17, 54);
-  color: rgb(255, 255, 255)!important;
+  color: rgb(255, 255, 255) !important;
 }
 .card-tools {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .card-title {
@@ -52,8 +52,8 @@
   padding-top: 0.5rem;
 }
 .icon {
-  font-size: 1.5rem!important;
-  padding: 0.2rem 0.4rem
+  font-size: 1.5rem !important;
+  padding: 0.2rem 0.4rem;
 }
 .icon:hover {
   color: #ff1e56;
@@ -62,10 +62,10 @@
 /* MODAL */
 
 .modal-title {
-  color: rgb(15,15,15)
+  color: rgb(15, 15, 15);
 }
 .modal-body {
-  background-color: rgb(15,15,15);
+  background-color: rgb(15, 15, 15);
 }
 
 /* BADGE */
@@ -130,28 +130,28 @@
   border-radius: 1rem;
 }
 .container-top {
-    height: 30vh;
-    /* background-color: antiquewhite; */
-    overflow: auto;
+  height: 30vh;
+  /* background-color: antiquewhite; */
+  overflow: auto;
 }
 .container-image {
-    height: 100%;
-    /* background-color: rgb(255, 255, 255); */
-    border-radius: 1rem;
+  height: 100%;
+  /* background-color: rgb(255, 255, 255); */
+  border-radius: 1rem;
 }
 .container-content {
   width: 90%;
   float: left;
 }
 img {
-    width: 100%;
-    height: 25vh;
-    object-fit: cover;
-    border-radius: 1rem;
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 .container-tools {
-    height: 100%;
-    /* background-color: #ff1e56; */
+  height: 100%;
+  /* background-color: #ff1e56; */
 }
 /* TEXT */
 .title {
@@ -160,12 +160,12 @@ img {
   padding-top: 1rem;
 }
 .text-light {
-  color: #ff1e56!important;
-  font-family: 'Open Sans';
+  color: #ff1e56 !important;
+  font-family: "Open Sans";
   padding-bottom: 1rem;
 }
 .content {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 1.2rem;
   line-height: 2rem;
   font-weight: 400;
@@ -182,7 +182,7 @@ img {
   font-size: 1.3rem;
   border-radius: 1rem;
   padding: 0.5rem;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-weight: 600;
   height: auto;
 }

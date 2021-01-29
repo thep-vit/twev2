@@ -1,5 +1,4 @@
 {
-  "homepage": "http://siddharthpatil.me/twev2",
   "name": "twev2",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +7,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
+    "fetch": "^1.1.0",
     "form-data": "^3.0.0",
     "js-cookie": "^2.2.1",
     "lodash": "^4.17.20",
@@ -22,8 +22,6 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
