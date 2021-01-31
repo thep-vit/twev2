@@ -42,10 +42,11 @@ function UserForm(props) {
         }
     }
 
-    function SaveCredentials(id, name, token) {
+    function SaveCredentials(id, name, token, onboarded) {
         Cookies.set("id", id)
         Cookies.set("name", name)
         Cookies.set("token", token)
+        Cookies.set("onb", onboarded)
     }
 
     function HandleClick(event) {
@@ -59,7 +60,8 @@ function UserForm(props) {
                 }
             }).then((response) => {
                 if (response.status === 201) {
-                    SaveCredentials(response.data.newUser._id, response.data.newUser.name, response.data.token)
+                    console.log(response.data);
+                    SaveCredentials(response.data.newUser._id, response.data.newUser.name, response.data.token, response.data.newUser.onboarding)
                     setSuccess(2)
                 }
                 if (response.status === 400) {
@@ -68,9 +70,7 @@ function UserForm(props) {
                 }
             }).catch(err => {
                 console.log(err);
-                setSuccess(3)   
-                setErr(err.body.message)
-            })
+                setSuccess(3)               })
         } else if (props.type === "login") {
             logInfo.password = md5(logInfo.password)
             console.log(logInfo);
@@ -82,7 +82,7 @@ function UserForm(props) {
                 console.log(response);
                 if (response.status === 200) {
                     console.log(response.data);
-                    SaveCredentials(response.data.userFound._id, response.data.userFound.name, response.data.token)
+                    SaveCredentials(response.data.userFound._id, response.data.userFound.name, response.data.token, response.data.userFound.onboarding)
                     setSuccess(2)
                 }
                 if (response.status === 400) {

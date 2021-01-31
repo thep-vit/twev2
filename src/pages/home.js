@@ -19,7 +19,7 @@ function Home() {
                                         <a href="/register" style={{textDecoration: 'none'}}><button className="btn btn-lg btn-dark btn-block btn-login btn-blue text-uppercase font-weight-bold mb-2">Create an account</button></a>
                                         <a href="/login" style={{textDecoration: 'none'}}><button className="btn btn-lg btn-dark btn-block btn-login btn-blue text-uppercase font-weight-bold mb-2">Sign in</button></a>
                                         <div className="form-label-group text-center">
-                                            <p className="text-dark" style={{ fontFamily: "Open Sans" }}>&copy; 2020 THEPC - VIT. All Rights Reserved. <br /> v2.0.b0.1</p>
+                                            <p className="text-dark" style={{ fontFamily: "Open Sans" }}>&copy; 2020 THEPC - VIT. All Rights Reserved. <br /> v2.1</p>
                                         </div>
 
                                     </div>

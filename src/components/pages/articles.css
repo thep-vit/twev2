@@ -17,6 +17,9 @@
 .card:hover .text-muted {
   color: rgb(255, 30, 86, 0.7) !important;
 }
+.text-muted{
+  line-height: 1em;
+}
 .card-comment:hover {
   padding: 1rem;
   background-color: rgb(25, 25, 25);

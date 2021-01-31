@@ -17,6 +17,7 @@ function Signout() {
             Cookies.remove("id")
             Cookies.remove("name")
             Cookies.remove("token")
+            Cookies.remove("onb")
             setToken("")
         }).catch((error) => {
             console.log(error);
