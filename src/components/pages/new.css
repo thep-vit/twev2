@@ -87,7 +87,7 @@ input[type=file]::-webkit-file-upload-button:active {
   transition: 0.2s;
 }
 #inputArticle {
-    background-color: transparent;
+    background-color: rgb(43, 43, 43);
     border: none;
     color: #fff;
     font-size: 1.8rem;
