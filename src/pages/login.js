@@ -133,7 +133,8 @@ function UserForm(props) {
                                                             <button className="btn btn-lg btn-danger btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onClick={HandleClick}>Try Again</button>
 
                                                     }                                                <div className="text-center">
-                                                        <a className="small" href={"/register"}>Create an account!</a>
+                                                        <a className="small" href={"/register"}>Create an account!</a>&nbsp;&nbsp;
+                                                        <a className="small" href={"/reset"}>Forgot Password</a>
 
                                                     </div>
                                                     {success === 3 && 
