@@ -3,7 +3,7 @@ import { Redirect, useParams } from "react-router-dom";
 import Navbar from "../components/dashboard/navbar";
 import Sidebar from "../components/dashboard/sidebar";
 import Page from "../components/dashboard/page";
-import OnBoard from "../components/dashboard/onboarding"
+import OnBoard from "../components/dashboard/onboarding";
 import Cookies from "js-cookie";
 import axios from "axios";
 import qs from "qs";
@@ -11,7 +11,7 @@ import qs from "qs";
 function Dashboard() {
   const { page } = useParams();
   const [valid, setValid] = useState();
-//   const [onboarded, setOnboarded] = useState(Cookies.get("onb"));
+  //   const [onboarded, setOnboarded] = useState(Cookies.get("onb"));
   function handleAuth(response) {
     if (response.admin === false) {
       setValid("true");
@@ -24,21 +24,23 @@ function Dashboard() {
 
   React.useEffect(() => {
     axios
-      .post("https://thepc.herokuapp.com/api/check/auth", qs.stringify({}), {
-        headers: {
-          Authorization: "Bearer " + Cookies.get("token"),
-        },
-      })
+      .post(
+        "https://thepc-bknd.onrender.com/api/check/auth",
+        qs.stringify({}),
+        {
+          headers: {
+            Authorization: "Bearer " + Cookies.get("token"),
+          },
+        }
+      )
       .then((response) => {
         handleAuth(response.data);
       });
   }, []);
-  
+
   if (Cookies.get("token")) {
     if (Cookies.get("onb") === "false") {
-      return (
-      <OnBoard admin={valid}/>
-      );
+      return <OnBoard admin={valid} />;
     } else {
       return (
         <div className="">
