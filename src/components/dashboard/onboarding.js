@@ -1,9 +1,9 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import Dashboard from "../../pages/dashboard";
-import * as Icon from 'react-bootstrap-icons'
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
-import Loader from 'react-loader-spinner'
+import * as Icon from "react-bootstrap-icons";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
 import "./onboarding.css";
 import axios from "axios";
 import Cookies from "js-cookie";
@@ -27,21 +27,25 @@ function OnBoard(props) {
     //   console.log(props.admin);
     setPage(val);
   }
-//   function HandleFinish() {
-//       console.log(status);
-//     setStatus(1);
-//     console.log(status);
-//   }
+  //   function HandleFinish() {
+  //       console.log(status);
+  //     setStatus(1);
+  //     console.log(status);
+  //   }
   React.useEffect(() => {
     if (status === 1) {
       axios
-        .patch("https://thepc.herokuapp.com/api/onboard/", qs.stringify({}), {
-          headers: {
-            Authorization: "Bearer " + Cookies.get("token"),
-          },
-        })
+        .patch(
+          "https://thepc-bknd.onrender.com/api/onboard/",
+          qs.stringify({}),
+          {
+            headers: {
+              Authorization: "Bearer " + Cookies.get("token"),
+            },
+          }
+        )
         .then((res) => {
-            console.log(res);
+          console.log(res);
           Cookies.set("onb", "true");
           setStatus(2);
         })
@@ -135,35 +139,47 @@ function OnBoard(props) {
                             article and find out if your current piece is
                             approved or not. <br />
                             <br />
-                             Click on an article title to view <br />
+                            Click on an article title to view <br />
                             <Icon.PencilFill /> - Edit article
                             <br />
                             <Icon.ChatFill /> - Comment on article
                             <br />
-                            <Icon.TrashFill />  - Delete article <br /> <br />
+                            <Icon.TrashFill /> - Delete article <br /> <br />
                             To view your peers' work, you can check out the 'All
                             Articles' page.
                           </p>
-                          {admin ? 
-                          <button
-                            className="btn btn-lg btn-dark btn-block btn-login btn-blue text-uppercase font-weight-bold mb-2 mt-5"
-                            onClick={() => HandleClick(3)}>
-                            Proceed
-                          </button>
-                          :
-                         status === 1 ?
-                            <button className="btn btn-lg btn-outline-dark btn-block btn-login btn-blue text-uppercase font-weight-bold mb-2" type="submit"><Loader type="Audio" color="#fff" height={20} width={20} /> </button>
-                        :
-                          <button
-                          className="btn btn-lg btn-dark btn-block btn-login btn-blue text-uppercase font-weight-bold mb-2 mt-5"
-                          onClick={()=>setStatus(1)}>
-                          Get Started
-                        </button>
-                          }
- 
+                          {admin ? (
+                            <button
+                              className="btn btn-lg btn-dark btn-block btn-login btn-blue text-uppercase font-weight-bold mb-2 mt-5"
+                              onClick={() => HandleClick(3)}
+                            >
+                              Proceed
+                            </button>
+                          ) : status === 1 ? (
+                            <button
+                              className="btn btn-lg btn-outline-dark btn-block btn-login btn-blue text-uppercase font-weight-bold mb-2"
+                              type="submit"
+                            >
+                              <Loader
+                                type="Audio"
+                                color="#fff"
+                                height={20}
+                                width={20}
+                              />{" "}
+                            </button>
+                          ) : (
+                            <button
+                              className="btn btn-lg btn-dark btn-block btn-login btn-blue text-uppercase font-weight-bold mb-2 mt-5"
+                              onClick={() => setStatus(1)}
+                            >
+                              Get Started
+                            </button>
+                          )}
+
                           <button
                             className="btn btn-lg btn-dark btn-outline btn-block btn-login text-uppercase font-weight-bold mb-2"
-                            onClick={() => HandleClick(1)}>
+                            onClick={() => HandleClick(1)}
+                          >
                             Back
                           </button>
                           <div className="form-label-group text-center">
@@ -179,17 +195,21 @@ function OnBoard(props) {
                           </h1>
 
                           <p className="onboard-desc">
-                          As Editor-in-Chief you are responsible for approving/rejecting articles submitted by other authors.<br/><br/>
-
-                        From the menu panel, <br />
-                        Click <Icon.EmojiHeartEyesFill /> to Approve <br />
-                        Click <Icon.EmojiAngryFill /> to Reject <br />
-
-Only articles that have been approved can be added to an edition to be published.
+                            As Editor-in-Chief you are responsible for
+                            approving/rejecting articles submitted by other
+                            authors.
+                            <br />
+                            <br />
+                            From the menu panel, <br />
+                            Click <Icon.EmojiHeartEyesFill /> to Approve <br />
+                            Click <Icon.EmojiAngryFill /> to Reject <br />
+                            Only articles that have been approved can be added
+                            to an edition to be published.
                           </p>
                           <button
                             className="btn btn-lg btn-dark btn-block btn-login btn-blue text-uppercase font-weight-bold mb-2 mt-5"
-                            onClick={() => HandleClick(4)}>
+                            onClick={() => HandleClick(4)}
+                          >
                             Proceed
                           </button>
                           <button
@@ -211,20 +231,31 @@ Only articles that have been approved can be added to an edition to be published
                           <p className="onboard-desc">
                             1. Enter the edition details <br />
                             2. Add the HoV link <br />
-                            3. Click to select/de-select articles from the list <br />
+                            3. Click to select/de-select articles from the list{" "}
+                            <br />
                             4. Click Publish Edition <br />
                           </p>
-                          {
-                         status === 1 ?
-                            <button className="btn btn-lg btn-outline-dark btn-block btn-login btn-blue text-uppercase font-weight-bold mb-2" type="submit"><Loader type="Audio" color="#fff" height={20} width={20} /> </button>
-                        :
+                          {status === 1 ? (
+                            <button
+                              className="btn btn-lg btn-outline-dark btn-block btn-login btn-blue text-uppercase font-weight-bold mb-2"
+                              type="submit"
+                            >
+                              <Loader
+                                type="Audio"
+                                color="#fff"
+                                height={20}
+                                width={20}
+                              />{" "}
+                            </button>
+                          ) : (
+                            <button
+                              className="btn btn-lg btn-dark btn-block btn-login btn-blue text-uppercase font-weight-bold mb-2 mt-5"
+                              onClick={() => setStatus(1)}
+                            >
+                              Get Started
+                            </button>
+                          )}
                           <button
-                          className="btn btn-lg btn-dark btn-block btn-login btn-blue text-uppercase font-weight-bold mb-2 mt-5"
-                          onClick={()=> setStatus(1)}>
-                          Get Started
-                        </button>
-                          }
-                        <button
                             className="btn btn-lg btn-dark btn-outline btn-block btn-login text-uppercase font-weight-bold mb-2"
                             onClick={() => HandleClick(3)}
                           >
